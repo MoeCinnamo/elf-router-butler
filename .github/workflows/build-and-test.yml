@@ -19,7 +19,7 @@ jobs:
         go-version: '1.25'
 
     - name: Install Module
-      run: sudo apt install libwayland-client0 libwayland-dev libxkbcommon-dev vulkan-tools libvulkan-dev && go mod tidy
+      run: sudo apt install libwayland-client0 libwayland-dev libxkbcommon-dev vulkan-tools libvulkan-dev libx11-dev && go mod tidy
 
     - name: Test
       run: go test -coverprofile=coverage.txt

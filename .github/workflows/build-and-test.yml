@@ -18,8 +18,34 @@ jobs:
       with:
         go-version: '1.25'
 
-    - name: Install Module
-      run: sudo apt install libwayland-client0 libwayland-dev libxkbcommon-dev vulkan-tools libvulkan-dev libx11-dev libegl1-mesa-dev libegl1-mesa-dev libwayland-egl1-mesa-dev libwayland-client0 libwayland-dev libwayland-cursor0 libwayland-cursor-dev libxkbcommon-dev libxkbcommon-x11-dev libx11-xcb-dev libxcursor-dev libxfixes-dev && go mod tidy
+    - name: Update System
+      run: sudo apt update && sudo apt upgrade -y && sudo apt install software-properties-common -y && sudo add-apt-repository universe && sudo apt update && sudo apt upgrade -y
+
+    - name: Install Software
+      run: sudo apt install -y \
+           software-properties-common \
+           libwayland-client0 \
+           libwayland-dev \
+           libxkbcommon-dev \
+           vulkan-tools \
+           libvulkan-dev \
+           libx11-dev \
+           libegl1-mesa-dev \
+           libegl1-mesa-dev \
+           libwayland-egl1-mesa-dev \
+           libwayland-egl-backend-dev \
+           libwayland-client0 \
+           libwayland-dev \
+           libwayland-cursor0 \
+           libwayland-cursor-dev \
+           libxkbcommon-dev \
+           libxkbcommon-x11-dev \
+           libx11-xcb-dev \
+           libxcursor-dev \
+           libxfixes-dev
+
+    - name: Install Modules
+      run: go mod tidy
 
     - name: Test
       run: go test -coverprofile=coverage.txt

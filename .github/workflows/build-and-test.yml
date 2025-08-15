@@ -15,7 +15,7 @@ jobs:
 
     - name: Update System and Install Software
       run: |
-        sudo apt update && sudo apt upgrade -y && sudo apt install software-properties-common -y && sudo add-apt-repository universe && sudo add-apt-repository multiverse && sudo apt update && sudo apt upgrade -y &&sudo apt install -y \
+        sudo apt update && sudo apt upgrade -y && sudo apt install software-properties-common -y && sudo add-apt-repository universe && sudo add-apt-repository multiverse && sudo apt update && sudo apt upgrade -y && sudo apt install -y \
         software-properties-common \
         libwayland-client0 \
         libwayland-dev \
@@ -25,12 +25,10 @@ jobs:
         libx11-dev \
         libegl1-mesa-dev \
         libegl1-mesa-dev \
-        libwayland-egl1-mesa-dev \
         libwayland-egl-backend-dev \
         libwayland-client0 \
         libwayland-dev \
         libwayland-cursor0 \
-        libwayland-cursor-dev \
         libxkbcommon-dev \
         libxkbcommon-x11-dev \
         libx11-xcb-dev \

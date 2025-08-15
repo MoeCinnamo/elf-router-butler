@@ -18,26 +18,26 @@ jobs:
 
     - name: Install Software
       run: sudo apt install -y \
-           software-properties-common \
-           libwayland-client0 \
-           libwayland-dev \
-           libxkbcommon-dev \
-           vulkan-tools \
-           libvulkan-dev \
-           libx11-dev \
-           libegl1-mesa-dev \
-           libegl1-mesa-dev \
-           libwayland-egl1-mesa-dev \
-           libwayland-egl-backend-dev \
-           libwayland-client0 \
-           libwayland-dev \
-           libwayland-cursor0 \
-           libwayland-cursor-dev \
-           libxkbcommon-dev \
-           libxkbcommon-x11-dev \
-           libx11-xcb-dev \
-           libxcursor-dev \
-           libxfixes-dev
+          software-properties-common \
+          libwayland-client0 \
+          libwayland-dev \
+          libxkbcommon-dev \
+          vulkan-tools \
+          libvulkan-dev \
+          libx11-dev \
+          libegl1-mesa-dev \
+          libegl1-mesa-dev \
+          libwayland-egl1-mesa-dev \
+          libwayland-egl-backend-dev \
+          libwayland-client0 \
+          libwayland-dev \
+          libwayland-cursor0 \
+          libwayland-cursor-dev \
+          libxkbcommon-dev \
+          libxkbcommon-x11-dev \
+          libx11-xcb-dev \
+          libxcursor-dev \
+          libxfixes-dev
 
     - name: Set up Go
       uses: actions/setup-go@v4

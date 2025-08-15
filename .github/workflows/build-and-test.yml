@@ -13,11 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Go
-      uses: actions/setup-go@v4
-      with:
-        go-version: '1.25'
-
     - name: Update System
       run: sudo apt update && sudo apt upgrade -y && sudo apt install software-properties-common -y && sudo add-apt-repository universe && sudo apt update && sudo apt upgrade -y
 
@@ -43,6 +38,11 @@ jobs:
            libx11-xcb-dev \
            libxcursor-dev \
            libxfixes-dev
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.25'
 
     - name: Install Modules
       run: go mod tidy

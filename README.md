@@ -1,9 +1,9 @@
-- [English] (# en)
-- [简体中文] (# zh-cn)
-# en
+- [English](#English)
+- [简体中文](#简体中文)
+# English
 ## elf-router-butler
 development...
 
-# zh-cn
+# 简体中文
 ## 路由精灵管家
 开发中...
